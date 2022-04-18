@@ -2,7 +2,7 @@
 Phase 3 sinatra project front end.
 
 # Model:
-[Doc - Apr 18 2022 - 2-40 PM.pdf](https://github.com/ahellam/phase-3-campr-frontend/files/8508340/Doc.-.Apr.18.2022.-.2-40.PM.pdf)
+![WireFrame](https://user-images.githubusercontent.com/37206824/163883151-d0e727b9-d659-47c5-bcc4-eac162ad31cb.jpg)
 
 
 # USER STORY:
