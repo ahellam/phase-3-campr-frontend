@@ -2,7 +2,8 @@
 Phase 3 sinatra project front end.
 
 # Model:
-![pdf](https://github.com/ahellam/phase-3-campr-frontend/blob/main/Doc%20-%20Apr%2018%202022%20-%202-40%20PM.pdf)
+[Doc - Apr 18 2022 - 2-40 PM.pdf](https://github.com/ahellam/phase-3-campr-frontend/files/8508340/Doc.-.Apr.18.2022.-.2-40.PM.pdf)
+
 
 # USER STORY:
 As a a user I would like to.. 
