@@ -1,7 +1,9 @@
 # campr
 Phase 3 sinatra project front end.
 
-USER STORY:
+# Model:
+
+# USER STORY:
 As a a user I would like to.. 
 Create:   user books a reservation
 Read:     /reservations/campgrounds/campsites 
