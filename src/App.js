@@ -1,21 +1,40 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+import Navbar from "./Navbar";
+import Filters from "./Filters";
+import Campsites from "./Campsites";
+import Reservations from "./Reservations";
+
+
 function App() {
+  const [campsites, setCampsites] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/campsites")
+    .then(res => res.json())
+    .then(setCampsites)
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="Nav">
+          <Navbar />
+        </div>
+        <div className="Content">
+          <Switch>
+            <Route exact path="/">
+              <Filters />
+              <Campsites campsites={campsites}/>
+            </Route>
+            <Route path="/reservations">
+              <Reservations />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
