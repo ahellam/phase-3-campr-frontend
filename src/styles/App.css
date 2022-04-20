@@ -6,4 +6,10 @@
 
 .main-container {
     display: grid;
+    grid-auto-flow: row;
+}
+
+img {
+    max-width: 10%;
+    display: block;
 }

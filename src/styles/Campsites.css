@@ -1,0 +1,13 @@
+.Campsites {
+    width: min(90%, 75rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    /* grid-auto-flow: row; */
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: .5rem;
+    
+    /* text-align: center; */
+
+}
