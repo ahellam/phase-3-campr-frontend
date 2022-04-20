@@ -1,0 +1,25 @@
+.campsite__card {
+display: grid;
+padding: .5rem;
+grid-template-rows: auto;
+place-items: center;
+border-radius: 25px;
+max-width: 400px;
+box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+.campsite__card img {
+    border-radius: 25px;
+    padding: .25rem;
+    width: 90%;
+
+    /* max-width: 400px; */
+    aspect-ratio: 1.5 / 1;
+    object-fit: cover; 
+
+}
+
+.campsite__card .card__content {
+    text-align: center;
+    font-size: 75%;
+}
