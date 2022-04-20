@@ -1,15 +1,14 @@
 import React from "react";
 import CampCard from "./CampCard";
+import '../styles/Campsites.css';
 
 function Campsites({ campsites }) {
+  // console.log(campsites)
   return (
-    <div>
-      <h1>Campsite Cards Go Here</h1>
-      <div>
+    <div className="Campsites">
         {campsites.map((site) => (
           <CampCard key={site.id} site={site} />
         ))}
-      </div>
     </div>
   );
 }
