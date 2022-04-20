@@ -27,7 +27,7 @@ function App() {
         <div className="Content">
           <Switch>
             <Route exact path="/">
-              <Campsites campsites={campsites}/>
+              {/* <Campsites campsites={campsites}/> */}
             </Route>
             <Route path="/reservations">
               <Reservations />

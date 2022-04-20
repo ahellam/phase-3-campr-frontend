@@ -1,12 +1,28 @@
 .navbar-container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 2fr 1fr;
     padding-block: 15px;
-    border-bottom: 1px solid rgb(187, 187, 187);
+    border-bottom: 1px solid #ebebeb;
     place-items: center;
+}
+
+.logo {
+    justify-self: start;
+    padding-left: 35px;
 }
 
 .datepicker {
     align-self: center;
     justify-self: center;
+}
+
+.navlinks {
+    justify-self: end;
+    padding-right: 25px;
+}
+
+.navlinks a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
 }

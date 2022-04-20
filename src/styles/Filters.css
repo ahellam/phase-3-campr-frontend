@@ -1,0 +1,74 @@
+.filters-container {
+    display: flex;
+    padding-block: 15px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ebebeb;
+    place-items: center;
+    justify-items: center;
+    height: max-content;
+}
+
+.accommodations {
+    display: flex;
+    margin-left: 10px;
+}
+
+.price-filter-wrapper {
+    height: 45px;
+    margin-inline: 5px;
+}
+
+.price-filter-wrapper select {
+    padding-inline: 5px;
+    border: 1px solid rgba(211, 211, 211);
+}
+
+.price-filter-wrapper select:focus {
+    outline: 0;
+}
+
+.accomodation-button {
+    padding-inline: 10px;
+    padding-block: 7px;
+    margin-inline: 5px;
+    height: 45px;
+    border: 1px solid rgba(211, 211, 211);
+
+    display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.accomodation-button i {
+    margin-right: 5px;
+}
+
+.accomodation-button:hover {
+    border: 1px solid #333333;
+    cursor: pointer;
+}
+
+.accomodation-button.active:hover {
+    border: 1px solid #66e2da;
+}
+
+.accomodation-button.active {
+    background-color: #66e2da0c;
+    color: #66e2da;
+}
+
+.filter-button {
+    margin-inline: 10px;
+}
+
+#price_filter {
+    height: 100%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 48
+}
