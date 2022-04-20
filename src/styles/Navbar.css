@@ -1,0 +1,12 @@
+.navbar-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding-block: 15px;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    place-items: center;
+}
+
+.datepicker {
+    align-self: center;
+    justify-self: center;
+}
