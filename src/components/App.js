@@ -6,7 +6,6 @@ import Filters from "./Filters";
 import Campsites from "./Campsites";
 import Reservations from "./Reservations";
 
-
 const camprAPI = "http://localhost:9292/campsites"
 
 function App() {
