@@ -4,13 +4,22 @@ import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Filters from "./Filters";
 import Campsites from "./Campsites";
-import Reservations from "./Reservations";
+import ReservationsList from "./ReservationsList";
 
 
 const camprAPI = "http://localhost:9292/campsites"
+const resAPI = "http://localhost:9292/reservations"
 
 function App() {
   const [campsites, setCampsites] = useState([]);
+
+  const [reservations, setReservations] = useState([])
+
+  useEffect(() => {
+      fetch(resAPI)
+      .then(res => res.json())
+      .then(setReservations)
+  },[])
 
   useEffect(() => {
     fetch(camprAPI)
@@ -28,10 +37,10 @@ function App() {
         <div className="Content">
           <Switch>
             <Route exact path="/">
-              <Campsites campsites={campsites}/>
+              <Campsites campsites={campsites} setReservations={setReservations} />
             </Route>
             <Route path="/reservations">
-              <Reservations />
+              <ReservationsList reservations={reservations} setReservations={setReservations}/>
             </Route>
           </Switch>
         </div>
