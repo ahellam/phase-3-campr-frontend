@@ -19,7 +19,10 @@ class Navbar extends Component {
     return (
       <div className="navbar-container">
         <div className="logo">
-          <h2>CAMP'R</h2>
+          <h2>
+              <img className="logo-icon" src="https://logos-world.net/wp-content/uploads/2020/09/Tinder-Emblem.png"></img>
+            CAMP'R
+          </h2>
         </div>
         <div className="datepicker">
           <DateRangePicker

@@ -37,6 +37,13 @@ function App() {
     .then((camps) => setCampsites(camps));
   }
 
+  function deleteReservation(resToDelete) {
+    fetch(`http://localhost:9292/reservations/${resToDelete.id}`, {
+      method: "DELETE",
+    });
+    setReservations(reservations.filter((res) => res.id !== resToDelete.id))
+  }
+
   return (
     <Router>
       <div className="main-container">
@@ -50,7 +57,7 @@ function App() {
               <Campsites campsites={campsites} setReservations={setReservations} reservations={reservations}/>
             </Route>
             <Route path="/reservations">
-              <ReservationsList reservations={reservations}/>
+              <ReservationsList reservations={reservations} deleteReservation={deleteReservation} />
             </Route>
           </Switch>
         </div>
