@@ -3,7 +3,6 @@ import CampCard from "./CampCard";
 import '../styles/Campsites.css';
 
 function Campsites({ campsites }) {
-  // console.log(campsites)
   return (
     <div className="Campsites">
         {campsites.map((site) => (

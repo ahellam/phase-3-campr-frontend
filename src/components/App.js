@@ -7,23 +7,44 @@ import Campsites from "./Campsites";
 import Reservations from "./Reservations";
 
 
-const camprAPI = "http://localhost:9292/campsites"
+const camprAPI = "http://localhost:9292"
+
 
 function App() {
   const [campsites, setCampsites] = useState([]);
+  const [reservations, setReservations] = useState([]);
 
   useEffect(() => {
-    fetch(camprAPI)
+    fetch(camprAPI+"/campsites")
     .then(res => res.json())
     .then(setCampsites)
   },[]);
+
+  useEffect(() => {
+    fetch(camprAPI+"/reservations")
+    .then(res => res.json())
+    .then(setReservations)
+  },[]);
+  
+  function filteredCampsites() {
+    const filterValues = [...document.querySelectorAll(".accomodation-button.active")];
+    const activeFilters = filterValues.map((activeEl) => activeEl.getAttribute("data-value").split(' ').join('_') );
+    let camprUrl = camprAPI + '/campsites?';
+    for (let value of activeFilters) {
+      camprUrl = `${camprUrl}&${value}=true`
+    }
+
+    fetch(camprUrl)
+    .then((r) => r.json())
+    .then((camps) => setCampsites(camps));
+  }
 
   return (
     <Router>
       <div className="main-container">
         <div className="Nav">
           <Navbar />
-          <Filters />
+          <Filters filteredCampsites={filteredCampsites}/>
         </div>
         <div className="Content">
           <Switch>
@@ -31,7 +52,7 @@ function App() {
               <Campsites campsites={campsites}/>
             </Route>
             <Route path="/reservations">
-              <Reservations />
+              <Reservations reservations={reservations}/>
             </Route>
           </Switch>
         </div>

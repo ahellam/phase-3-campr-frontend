@@ -10,12 +10,16 @@ const FILTERS = [
     "RV hookup"
 ]
 
-function Filters() {
+function Filters({filteredCampsites}) {
     return (
         <div className="filters-container">
             <div className='accommodations'>
                 {FILTERS.map((filter) => {
-                    return <AccomodationButton filter={filter}/>
+                    return <AccomodationButton 
+                            filter={filter} 
+                            key={filter}
+                            filteredCampsites={filteredCampsites}
+                        />
                 })}
             </div>
             

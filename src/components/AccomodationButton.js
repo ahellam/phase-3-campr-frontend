@@ -9,25 +9,20 @@ const FILTERS = {
 }
 
 
-function AccomodationButton({filter}) {
-    
-
+function AccomodationButton({filter, filteredCampsites}) {
     function handleClick(e) {
         const classes = e.target.classList;
         if (classes.contains("active")) {
             classes.remove("active")
         } else {
             classes.add("active")
-            console.log("Data value:", e.target.getAttribute("data-value"));
         }
+        filteredCampsites()
     }
 
   return (
     <div 
-        className='accomodation-button' 
-        onClick={handleClick} 
-        data-value={filter.toUpperCase()}
-    >
+        className='accomodation-button' onClick={handleClick} data-value={filter.toUpperCase()}>
         <MaterialIcon icon={FILTERS[filter]} />{filter}
     </div>
   )
