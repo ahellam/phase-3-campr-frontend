@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom"
 import "../styles/CampCards.css";
 
-function CampCard({ site }) {
+function CampCard({ site, setReservations }) {
   const { 
     site_number, 
     daily_price, 
@@ -40,7 +40,7 @@ function CampCard({ site }) {
       body: JSON.stringify(resData),
     })
     .then(res => res.json)
-    .then(console.log())
+    .then(setReservations)
     .then(history.push("/reservations"))
 
   }

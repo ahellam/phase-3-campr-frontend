@@ -1,49 +1,49 @@
 .campsite__card {
-    display: grid;
-    padding: .5rem;
-    /* grid-template-rows: 25vh 25vh; */
-    place-items: center;
+display: grid;
+padding: .5rem;
+/* grid-template-rows: 25vh 25vh; */
+place-items: center;
+border-radius: 25px;
+/* max-width: 400px; */
+box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+
+.campsite__card img {
     border-radius: 25px;
+    /* padding: .10rem; */
+    width: 90%;
+    height: 90%;
+    max-height: 200px;
+
     /* max-width: 400px; */
-    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
-    }
-    
-    .campsite__card img {
-        border-radius: 25px;
-        /* padding: .10rem; */
-        width: 90%;
-        height: 90%;
-        max-height: 200px;
-    
-        /* max-width: 400px; */
-        /* aspect-ratio: 1.5 / 1; */
-        object-fit: cover; 
-    
-    }
-    
-    .campsite__card .card__content {
-        /* display: grid; */
-        /* grid-auto-flow: row; */
-        /* grid-template-rows: .1fr .01fr .1fr .1fr .1fr; */
-        padding: .2em;
-        width: 90%;
-        display: block;
-        text-align: center;
-        font-size: 75%;
-    }
-    .card__name {
-        font-weight: 800;
-    }
-    
-    .card__amenities{
-        list-style-type: none;
-        display: grid;
-        /* grid-template-columns: 1fr 1fr; */
-    
-        font-size: 85%;
-        /* text-align: left; */
-    }
-    
-    li {
-        padding-right: 38px;
-    }
+    /* aspect-ratio: 1.5 / 1; */
+    object-fit: cover; 
+
+}
+
+.campsite__card .card__content {
+    /* display: grid; */
+    /* grid-auto-flow: row; */
+    /* grid-template-rows: .1fr .01fr .1fr .1fr .1fr; */
+    padding: .2em;
+    width: 90%;
+    display: block;
+    text-align: center;
+    font-size: 75%;
+}
+.card__name {
+    font-weight: 800;
+}
+
+.card__amenities{
+    list-style-type: none;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+
+    font-size: 85%;
+    /* text-align: left; */
+}
+
+li {
+    padding-right: 38px;
+}
