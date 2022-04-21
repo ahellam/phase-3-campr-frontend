@@ -24,9 +24,9 @@ class Navbar extends Component {
         <div className="datepicker">
           <DateRangePicker
             startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-            startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+            startDateId="start_date" // PropTypes.string.isRequired,
             endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-            endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+            endDateId="end_date" // PropTypes.string.isRequired,
             onDatesChange={({ startDate, endDate }) =>
               this.setState({ startDate, endDate })
             } // PropTypes.func.isRequired,

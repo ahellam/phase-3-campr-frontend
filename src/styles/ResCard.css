@@ -1,0 +1,14 @@
+.res__card {
+    display: grid;
+    padding: 1rem;
+    /* grid-template-rows: 25vh 25vh; */
+    place-items: center;
+    border-radius: 25px;
+    width: 90%;
+    /* max-width: 400px; */
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+    }
+
+.res__dates {
+    font-size: 90%;
+}
