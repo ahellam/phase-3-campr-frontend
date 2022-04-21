@@ -6,21 +6,11 @@ import Filters from "./Filters";
 import Campsites from "./Campsites";
 import ReservationsList from "./ReservationsList";
 
-
-const camprAPI = "http://localhost:9292/campsites"
-const resAPI = "http://localhost:9292/reservations"
+const camprAPI = "http://localhost:9292"
 
 function App() {
   const [campsites, setCampsites] = useState([]);
   const [reservations, setReservations] = useState([]);
-
-  const [reservations, setReservations] = useState([])
-
-  useEffect(() => {
-      fetch(resAPI)
-      .then(res => res.json())
-      .then(setReservations)
-  },[])
 
   useEffect(() => {
     fetch(camprAPI+"/campsites")
@@ -57,10 +47,10 @@ function App() {
         <div className="Content">
           <Switch>
             <Route exact path="/">
-              <Campsites campsites={campsites} setReservations={setReservations} />
+              <Campsites campsites={campsites} setReservations={setReservations} reservations={reservations}/>
             </Route>
             <Route path="/reservations">
-              <ReservationsList reservations={reservations} setReservations={setReservations}/>
+              <ReservationsList reservations={reservations}/>
             </Route>
           </Switch>
         </div>

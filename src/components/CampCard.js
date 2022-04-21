@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom"
 import "../styles/CampCards.css";
 
-function CampCard({ site, setReservations }) {
+function CampCard({ site, setReservations , reservations}) {
   const { 
     site_number, 
     daily_price, 
@@ -39,8 +39,8 @@ function CampCard({ site, setReservations }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(resData),
     })
-    .then(res => res.json)
-    .then(setReservations)
+    .then(res => res.json())
+    .then((newRes) => {setReservations([...reservations, newRes])})
     .then(history.push("/reservations"))
 
   }

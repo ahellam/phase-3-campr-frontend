@@ -3,8 +3,6 @@ import Reservation from './Reservation';
 import '../styles/Reservations.css';
 
 function ReservationsList({reservations}) {
-    
-
   return (
     <div className="Reservations">
         {reservations.map((res) => (
