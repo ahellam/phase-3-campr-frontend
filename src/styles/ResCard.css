@@ -1,6 +1,7 @@
 .res__card {
     display: grid;
-    padding: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     /* grid-template-rows: 25vh 25vh; */
     place-items: center;
     border-radius: 25px;
@@ -11,4 +12,13 @@
 
 .res__dates {
     font-size: 90%;
+}
+
+.res__button {
+    border-radius: 6px;
+    
+}
+
+.res__button:hover {
+    background-color: rgba(255, 0, 0, 0.195);
 }

@@ -59,7 +59,7 @@ function CampCard({ site, setReservations , reservations}) {
           {has_rv_hookup && <li>{has_rv_hookup ? "Rv Hookup" : ""}</li>}
         </ul>
         <h4 className="card__price"> ${daily_price} per night </h4>
-      <button onClick={() =>handleClick(site.id)}>Reserve</button>
+      <button className="card__button" onClick={() =>handleClick(site.id)}>RESERVE</button>
       </div>
     </div>
   );
