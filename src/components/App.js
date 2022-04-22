@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+
 import Navbar from "./Navbar";
 import Filters from "./Filters";
 import Campsites from "./Campsites";
 import ReservationsList from "./ReservationsList";
+
+
 
 const camprAPI = "http://localhost:9292"
 
@@ -22,7 +25,7 @@ function App() {
     fetch(camprAPI+"/reservations")
     .then(res => res.json())
     .then(setReservations)
-  },[handleReservationFavorite]);
+  },[]);
   
   function filteredCampsites() {
     const filterValues = [...document.querySelectorAll(".accomodation-button.active")];
@@ -59,7 +62,16 @@ function App() {
       },
       body: JSON.stringify({"favorite": isFavorite})
     })
+    .then(res => res.json)
+    .then(refreshReservations)
   }
+
+  function refreshReservations () {
+    fetch(camprAPI+"/reservations")
+    .then(res => res.json())
+    .then(setReservations)
+  }
+
 
   return (
     <Router>
