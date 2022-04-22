@@ -37,6 +37,13 @@ function App() {
     .then((camps) => setCampsites(camps));
   }
 
+  function handlePriceChange(e) {
+    const camprUrl = `${camprAPI}/campsites?filter_price=${e.target.value}`
+    fetch(camprUrl)
+    .then((r) => r.json())
+    .then((camps) => setCampsites(camps));
+  }
+
   function deleteReservation(resToDelete) {
     fetch(`http://localhost:9292/reservations/${resToDelete.id}`, {
       method: "DELETE",
@@ -49,7 +56,7 @@ function App() {
       <div className="main-container">
         <div className="Nav">
           <Navbar />
-          <Filters filteredCampsites={filteredCampsites}/>
+          <Filters filteredCampsites={filteredCampsites} handlePriceChange={handlePriceChange} />
         </div>
         <div className="Content">
           <Switch>

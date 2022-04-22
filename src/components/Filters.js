@@ -10,7 +10,7 @@ const FILTERS = [
     "RV hookup"
 ]
 
-function Filters({filteredCampsites}) {
+function Filters({filteredCampsites, handlePriceChange}) {
     return (
         <div className="filters-container">
             <div className='accommodations'>
@@ -24,14 +24,14 @@ function Filters({filteredCampsites}) {
             </div>
             
             <div className='price-filter-wrapper'>
-                <select name="price-filter" id="price_filter">
-                    <option value="any"> {"Any price"}</option>
+                <select name="price-filter" id="price_filter" onChange={handlePriceChange}>
+                    <option value="10000"> {"Any price"}</option>
                     <option value="25"> {"Under $25"}</option>
                     <option value="50"> {"Under $50"}</option>
                     <option value="75"> {"Under $75"}</option>
                     <option value="125"> {"Under $125"}</option>
                     <option value="175"> {"Under $175"}</option>
-                    <option value="175+"> {"$175 or more"}</option>
+                    <option value="10000"> {"$175 or more"}</option>
                 </select>
             </div>
         </div>
