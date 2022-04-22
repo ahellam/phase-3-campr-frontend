@@ -39,8 +39,8 @@ class Navbar extends Component {
         </div>
         <div className="navlinks">
           <nav>
-            <NavLink exact to="/">Campsites </NavLink>
-            <NavLink to="/reservations">Reservations </NavLink>
+            <NavLink exact to="/" activeClassName="activeLink">Campsites </NavLink>
+            <NavLink to="/reservations" activeClassName="activeLink">Reservations </NavLink>
           </nav>
         </div>
       </div>

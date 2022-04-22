@@ -24,10 +24,16 @@
 .navlinks {
     justify-self: end;
     padding-right: 25px;
+    color: rgb(149, 147, 147);
 }
 
 .navlinks a{
     margin-right: 15px;
     text-decoration: none;
     color: inherit;
+}
+
+.navlinks .activeLink {
+    font-weight: 800;
+    color: black;
 }

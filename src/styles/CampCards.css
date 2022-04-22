@@ -44,6 +44,14 @@ box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
     /* text-align: left; */
 }
 
+.card__button {
+    border-radius: 6px;
+    
+}
+.card__button:hover {
+    background-color: rgba(51, 255, 0, 0.195);
+}
+
 li {
     padding-right: 38px;
 }

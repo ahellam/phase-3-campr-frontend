@@ -24,7 +24,7 @@ function Reservation({ res, deleteReservation }) {
         {sd} to {ed}
       </p>
       <h4>Total Price: {`$${price_total}`}</h4>
-      <button onClick={() => deleteReservation(res)}>CANCEL RESERVATION</button>
+      <button className="res__button" onClick={() => deleteReservation(res)}>CANCEL RESERVATION</button>
     </div>
   );
 }
