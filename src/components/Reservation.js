@@ -7,7 +7,7 @@ function Reservation({ res, deleteReservation }) {
     campsite_id,
     start_date,
     end_date,
-    total_price
+    price_total
   } = res;
   
 
@@ -23,7 +23,7 @@ function Reservation({ res, deleteReservation }) {
       <p className="res__dates">
         {sd} to {ed}
       </p>
-      <h4>Total Price: {total_price}</h4>
+      <h4>Total Price: {`$${price_total}`}</h4>
       <button onClick={() => deleteReservation(res)}>CANCEL RESERVATION</button>
     </div>
   );
