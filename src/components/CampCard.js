@@ -12,7 +12,8 @@ function CampCard({ site, setReservations , reservations}) {
     has_picnic_table, 
     has_firepit, 
     has_bathrooms, 
-    has_rv_hookup } = site;
+    has_rv_hookup,
+    liked } = site;
 
     const history = useHistory();
 

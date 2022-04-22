@@ -22,7 +22,7 @@ function App() {
     fetch(camprAPI+"/reservations")
     .then(res => res.json())
     .then(setReservations)
-  },[]);
+  },[handleReservationFavorite]);
   
   function filteredCampsites() {
     const filterValues = [...document.querySelectorAll(".accomodation-button.active")];
@@ -51,6 +51,16 @@ function App() {
     setReservations(reservations.filter((res) => res.id !== resToDelete.id))
   }
 
+  function handleReservationFavorite(isFavorite, res) {
+    fetch(`${camprAPI}/reservations/${res.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body: JSON.stringify({"favorite": isFavorite})
+    })
+  }
+
   return (
     <Router>
       <div className="main-container">
@@ -64,7 +74,7 @@ function App() {
               <Campsites campsites={campsites} setReservations={setReservations} reservations={reservations}/>
             </Route>
             <Route path="/reservations">
-              <ReservationsList reservations={reservations} deleteReservation={deleteReservation} />
+              <ReservationsList reservations={reservations} deleteReservation={deleteReservation} handleReservationFavorite={handleReservationFavorite} />
             </Route>
           </Switch>
         </div>
